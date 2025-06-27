@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Planetas del Sistema Solar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px;
+    }
+    #bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  
+}
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+    }
+    .card {
+      width: 250px;
+      height: 350px;
+      perspective: 1000px;
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    }
+    .card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      backface-visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: white;
+      text-align: center;
+    }
+    .card-front {
+      background: rgba(0, 0, 0, 0.6);
+    }
+    .card-front img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+    .card-back {
+      background: rgba(25, 25, 112, 0.85);
+      transform: rotateY(180deg);
+    }
+    .card-front h2, .card-back h2 {
+      margin-bottom: 10px;
+      text-shadow: 0 2px 5px black;
+    }
+    .card-front p, .card-back p {
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+      <video autoplay muted loop playsinline id="bg-video">
+    <source src="recursoplanetas/video galaxia.mp4" type="video/mp4">
+  </video>
+  <div class="container">
+    <!-- Tarjeta 1: Mercurio -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="recursoplanetas/mercurio.jpg" alt="Mercurio">
+          <h2>Mercurio</h2>
+        </div>
+        <div class="card-back">
+          <h2>Dato</h2>
+          <p>Mercurio es el planeta más cercano al Sol y no tiene atmósfera significativa.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Tarjeta 2: Venus -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="recursoplanetas/venus.jpg" alt="Venus">
+          <h2>Venus</h2>
+        </div>
+        <div class="card-back">
+          <h2>Dato</h2>
+          <p>Venus tiene la atmósfera más densa del sistema solar y temperaturas extremas.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Tarjeta 3: Tierra -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="recursoplanetas/tierra.jpg" alt="Tierra">
+          <h2>Tierra</h2>
+        </div>
+        <div class="card-back">
+          <h2>Dato</h2>
+          <p>La Tierra es el único planeta conocido que alberga vida.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Tarjeta 4: Marte -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="recursoplanetas/marte.jpg" alt="Marte">
+          <h2>Marte</h2>
+        </div>
+        <div class="card-back">
+          <h2>Dato</h2>
+          <p>Marte es conocido como el planeta rojo por su contenido de óxido de hierro.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Tarjeta 5: Júpiter -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="recursoplanetas/Jupiter.jpg" alt="Júpiter">
+          <h2>Júpiter</h2>
+        </div>
+        <div class="card-back">
+          <h2>Dato</h2>
+          <p>Júpiter es el planeta más grande y tiene una gran mancha roja, una tormenta gigante.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Tarjeta 6: Saturno -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="recursoplanetas/saturno.jpg" alt="Saturno">
+          <h2>Saturno</h2>
+        </div>
+        <div class="card-back">
+          <h2>Dato</h2>
+          <p>Saturno es famoso por su sistema de anillos impresionantes hechos de hielo y roca.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Tarjeta 7: Urano -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="recursoplanetas/urano.jpg" alt="Urano">
+          <h2>Urano</h2>
+        </div>
+        <div class="card-back">
+          <h2>Dato</h2>
+          <p>Urano gira de lado, lo que lo hace único entre los planetas del sistema solar.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Tarjeta 8: Neptuno -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="recursoplanetas/neptuno.jpg" alt="Neptuno">
+          <h2>Neptuno</h2>
+        </div>
+        <div class="card-back">
+          <h2>Dato</h2>
+          <p>Neptuno tiene los vientos más rápidos del sistema solar, con hasta 2,100 km/h.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
